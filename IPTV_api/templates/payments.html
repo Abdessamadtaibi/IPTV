@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} ⏐ Payments{% endblock %}
+{% block content %}
+<script>
+  function checkIfAuthenticated() {
+      const token = localStorage.getItem('Token');
+  
+      if (!token) {
+          // If no token, redirect to login page
+          window.location.href = "/register/";
+      }
+  }
+  
+  // Run this function when the page loads
+window.onload = checkIfAuthenticated;
+</script>
+<section class="login-box content-overlay">
+<h1>Pay for IPTV Subscription</h1>
+<h3>Secure Payments With Wise </h3>
+<img src="{% static 'images/pay_me.png' %}" alt="Pay IPTV Subscription">
+<div class="header-btn">
+  <a href="https://wise.com/pay/me/abdessamadt22" style="text-decoration: none;"><button type="submit" class="btn">Pay With Wise</button></a>
+</div>
+<h3>After Pay </h3>
+<a href="/user/" style="color:rgb(182, 23, 23);">Get Your Subscription Code</a>
+</section>
+{% endblock %}

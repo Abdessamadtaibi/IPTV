@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} ⏐ Login{% endblock %}
+{% block content %}
+  <script>
+    function togglePasswordVisibility(icon) {
+    const input = icon.previousElementSibling;
+    if (input.type === "password") {
+      input.type = "text";
+      icon.classList.remove('fa fa-eye-slash');
+      icon.classList.add('fa-solid fa-eye');
+    } else {
+      input.type = "password";
+      icon.classList.remove('fa-solid fa-eye');
+      icon.classList.add('fa fa-eye-slash');
+    }
+  }
+  
+    async function login(event) {
+      event.preventDefault();
+
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+    try {
+      const response = await fetch('/auth/token/login/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': csrfToken,
+        },
+        body: JSON.stringify({
+          username: username,
+          password: password,
+        }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        localStorage.setItem('Token', data.auth_token);      
+        // Store token in cookies
+        document.cookie = `Token=${data.auth_token}; path=/; Secure; HttpOnly; SameSite=Lax`;
+        // Redirect to subscriptions page
+        window.location.href = "/payments/";
+      } else {
+        const errorData = await response.json();
+        alert("Login failed: " + (errorData.non_field_errors || "Unknown error"));
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again later.");
+    }
+  }
+</script>
+<form  onsubmit="login(event);" class="login-box content-overlay">
+  {% csrf_token %}
+  <h1 class="login-text">
+    Login
+  </h1>
+  <div class="input-box">
+    <input type="text" placeholder="username" id="username" required>
+    <i class='bx bxs-user' ></i>
+  </div>
+  <div class="input-box">
+    <input type="password" placeholder="Password" id="password" required>
+    <i class="fa-regular fa-eye-slash" onclick="togglePasswordVisibility(this)"></i>
+  </div>
+  <div class="remember-forgot">
+    <div>
+      <input type="checkbox" class="checkbox">Remember me 
+    </div>
+    <div>
+      <a href="#"> Forgot password?</a>
+    </div>
+  </div>
+  <div class="header-btn">
+    <button type="submit" class="btn"> Login</button>
+  </div>
+  <div class="Register">
+    <p>Don't have an account?<a href="http://127.0.0.1:8000/register/">  Register</a></p>
+  </div>
+</form>
+{% endblock %}

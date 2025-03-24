@@ -1,0 +1,545 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} ⏐ Home{% endblock %}
+{% block content %}
+<style>
+    .price-card .btn{
+    transform: transform 0.3s ease;
+  }
+  .price-card .bronze {
+    background: linear-gradient(135deg, #bc9563 0%, #c48e50 30%, #8f6235 70%, #dcb582 100%);
+  }
+  .price-card .silver {
+    background: linear-gradient(135deg, #e0e0e0 0%, #bdbdbd 30%, #8c8c8c 70%, #e0e0e0 100%);
+  }
+  .price-card .gold {
+    background: linear-gradient(135deg, #ffd83e 0%, #cdac58 30%, #c4941ce3 70%, #ffdd54d3 100%);
+  }
+  .price-card .btn:hover{
+    scale: 1.15;
+  }
+  .price-card .header-btn{
+    margin-left: 28%;
+    width: 200px;
+  }
+</style>
+<div class="content-overlay">
+  <div class="overlay-content">
+            <h1>FAST IPTV CONNECTION</h1>
+            <h2>Enjoy Top Quality Streaming <br> With WebIPTVStore</h2>
+            <p>ncludes all your favorite channels with local news,live sports, weather,</p>
+            <span> <i class='bx bx-check-circle'></i> Connect several devices at once,</span><br>
+            <span> <i class='bx bx-check-circle'></i>25,000 worldwide channels 4K</span><br>
+            <span> <i class='bx bx-check-circle'></i>500K new and old movies</span>
+    
+  </div>
+</div>
+<section class="who-we-are" style="padding-top: 5rem;">
+  <div class="carousel-container">
+    <div class="channels-logo">
+      <div class="channel-box"><img src="{% static 'images/channels/bein.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/disney.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/prime.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/netflix.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/hbo.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/videoland.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/FOX.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/SKY.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/formula1.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/hulu.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/apple.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/bein.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/disney.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/prime.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/netflix.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/hbo.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/videoland.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/FOX.png' %}" alt="IPTV"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/SKY.png' %}" alt="IPTV"></div>
+    </div>
+  </div>
+  <div class=" our-content pricing-carts">
+    <div class="our-content-image">
+      <img src="{% static 'images/image_fx1.jpeg' %}" style="border-radius: 20px;">
+    </div>
+    <div class="our-content-text">
+      <span class="top-title" style="color: rgba(212, 12, 12, 0.863);"> OUR CONTENT</span>
+      <h2>
+        More to Stream
+      </h2>
+      <p style="line-height: 1; opacity: 0.8; font-size: clamp(1em, 1.5vw, 2.5em); line-height: 2">
+        With our large and comprehensive collection of TV
+        channels, never miss your favorite sports games
+        and TV shows. You can be the first to see your new
+        episode.
+      </p>
+      <p style="line-height: 1; 
+      font-size: clamp(1em, 1.5vw, 2.5em);
+      line-height: 2 ;
+      opacity: 1; 
+      background: rgba(195, 18, 18, 0.75);
+      padding: 1rem 1rem 1rem 1rem; 
+      border-radius: 20px;">
+        Watch exclusive sports channels every week. 
+        Get top-rated TV customer service. 
+        Bundle your favorite services.
+      </p>
+      <ul class="who-we-are-list">
+        <li>
+          <i class='bx bx-check-circle'></i>
+          <span>25,000 worldwide channels 4K</span>
+        </li>
+        <li>
+          <i class='bx bx-check-circle'></i>
+          <span>500K new and old movies</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="who-we-are">
+  <div class="enjoy" style="text-align: center;">
+    <span class="top-title" style="color: rgba(212, 12, 12, 0.863);">ENJOY YOUR TIME</span>
+    <h2>
+        Enjoy watching now Movies, Series, Shows, Anime and More
+    </h2>
+  </div>
+  <div class="box-our-content" >
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <div class="image-box"><img src="{% static 'images/matrix.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/fast.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/joker.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/lacasa.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/spiderman.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/john-wick.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/avengers1.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/vikings1.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/prison-break.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/squid-game.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/the-100.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/breaking-bad.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/the-walking-dead.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/matrix.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/fast.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/joker.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/lacasa.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/spiderman.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/john-wick.jpeg' %}" alt="IPTV"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="who-we-are" id="ho-we-are">
+  <div class="pricing-carts" >
+    <div class="who-we-are-content">
+      <span class="top-title" style="color: rgba(212, 12, 12, 0.863);"> WHO WE ARE</span>
+      <h2>
+      We are proud to offer the best IPTV subscriptions
+      </h2>
+      <p style="line-height: 1.5; opacity: 0.8; font-size: clamp(1em, 1.3vw, 1.5em);">
+          Our Best IPTV subscriptions offer high-quality
+          streaming, with no buffering or lagging. You can
+          easily navigate through channels using our
+          user-friendly interface and enjoy a seamless
+          experience.
+      </p>
+      <ul class="who-we-are-list">
+        <li>
+          <i class='bx bx-check-circle'></i>
+          <span>Connect several devices at once</span>
+        </li>
+        <li>
+          <i class='bx bx-check-circle'></i>
+          <span>Gig download speeds available everywhere</span>
+        </li>
+        <li>
+          <i class='bx bx-check-circle'></i>
+          <span>Wall-to-wall wifi connection</span>
+        </li>
+      </ul>
+      <div class="header-btn"style="margin: 0vh 0 0 7vh;">
+        <div class="btn">
+          <div>
+              <a href="#pricing" class="btn-header" style="font-size: 16px;">Subscribe Now</a> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="we-are-review">
+      <div class="we-are-review-in">
+          <span>FIVE STAR REVIEWS</span>
+          <h2 style="color: black;margin-top: 40px;">500+</h2>
+      </div>
+      <div class="we-are-review-in">
+          <span>ACTIVE SUBSCRIPTIONS</span>
+          <h2 style="color: black;">2.5K+</h2>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Start Pricing Area -->
+<section class="who-we-are" style="min-height: 950px;" id="pricing">
+  <div style="text-align: center; padding-top: 5rem;" >
+    <span class="top-title" style="color: rgba(212, 12, 12, 0.863);">PRICING PLANS</span>
+    <h2>
+        Our Affordable Pricing Plans
+    </h2>
+  </div>
+  <div class="pricing-carts">
+    <div class="price-card" style="text-decoration: none;">
+        <img src="{% static 'images/bronze.png' %}" style="height: 80px;width: 80px;">
+        <h1>BRONSE PLAN</h1>
+        <h2>3 Month</h2>
+        <h3>$ 19.99</h3>
+        <ul class="pricing-list">
+          <li>
+            <span>Live TV and EPG Guide</span>
+            <i class='bx bx-check-circle'></i>
+          </li>
+          <li>
+            <span> Movies and VOD Shows</span>
+            <i class='bx bx-check-circle'></i>
+          </li>
+          <li>
+            <span> Compatible with all devices</span>
+            <i class='bx bx-check-circle'></i>
+          </li>
+          <li>
+            <span> Anti-Freeze Technology</span>
+            <i class='bx bx-check-circle'></i>
+          </li>
+          <li
+          >
+            <span> PPV and Sports Events</span>
+            <i class='bx bx-check-circle'></i>
+          </li>
+        </ul>
+        <div>
+          <div class="header-btn">
+            <div class="btn bronze">
+             <a href="http://127.0.0.1:8000/payments/" style="width: 100%; height: 100%;margin-top:23%;">GET PLAN</a>
+            </div>
+           </div>
+        </div>
+    </div>
+    <div  class="price-card" style="text-decoration: none;">
+      <img src="{% static 'images/silver.png' %}" style="height: 80px;width: 80px;">
+      <h1>SILVER PLAN</h1>
+      <h2>6 Month</h2>
+      <h3>$ 34.99</h3>
+      <ul class="pricing-list">
+        <li>
+          <span>Live TV and EPG Guide</span>
+          <i class='bx bx-check-circle'></i>
+        </li>
+        <li>
+          <span> Movies and VOD Shows</span>
+          <i class='bx bx-check-circle'></i>
+        </li>
+        <li>
+          <span> Compatible with all devices</span>
+          <i class='bx bx-check-circle'></i>
+        </li>
+        <li>
+          <span> Anti-Freeze Technology</span>
+          <i class='bx bx-check-circle'></i>
+        </li>
+        <li
+        >
+          <span> PPV and Sports Events</span>
+          <i class='bx bx-check-circle'></i>
+        </li>
+      </ul>
+      <div>
+        <div class="header-btn">
+          <div class="btn silver">
+           <a href="http://127.0.0.1:8000/payments/" style="width: 100%; height: 100%;margin-top:23%;">GET PLAN</a>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div  class="price-card" style="text-decoration: none;">
+    <img src="{% static 'images/gold.png' %}" style="height: 80px;width: 80px;">
+    <h1>GOLD PLAN</h1>
+    <h2>12 Month</h2>
+    <h3>$ 54.99</h3>
+    <ul class="pricing-list">
+      <li>
+        <span>Live TV and EPG Guide</span>
+        <i class='bx bx-check-circle'></i>
+      </li>
+      <li>
+        <span> Movies and VOD Shows</span>
+        <i class='bx bx-check-circle'></i>
+      </li>
+      <li>
+        <span> Compatible with all devices</span>
+        <i class='bx bx-check-circle'></i>
+      </li>
+      <li>
+        <span> Anti-Freeze Technology</span>
+        <i class='bx bx-check-circle'></i>
+      </li>
+      <li
+      >
+        <span> PPV and Sports Events</span>
+        <i class='bx bx-check-circle'></i>
+      </li>
+    </ul>
+    <div>
+      <div class="header-btn">
+        <div class="btn gold">
+         <a href="http://127.0.0.1:8000/payments/"style="width: 100%; height: 100%; margin-top:23%;">GET PLAN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div style="text-align: center; padding:3rem 0 ;" >
+    <h2 class="top-title">
+        How To Get IPTV Subscription ?
+    </h2>
+    <span class="top-title"><a href="/blog/how-to-get-iptv-subscription/" style="color: rgba(212, 12, 12, 0.863);"> Click Here</a></span>
+  </div>
+</section>
+<!-- End Pricing Area -->
+<!-- Start BENEFITS Area -->
+<section class="who-we-are">
+  <div class="pricing-carts">
+    <div class="col-xl-6">
+      <div class="benefits-img">
+        <img
+          src="{% static 'images/benefits.webp' %}"
+          alt="Images"
+        />
+        <div class="review mb-minus-53">
+          <div class="review-in">
+            <span>EXPERIENCE OF</span>
+            <h2>3 Yrs</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="benefits-contents">
+      <span class="top-title benef" style="color: rgba(212, 12, 12, 0.863);">BENEFITS</span>
+      <h2 class="benef">
+          Only benefits
+      </h2>
+
+        <div class="benefits-content pricing-carts">
+            <div class="col-lg-6">
+              <div class="d-flex benefits-single-item">
+                <div class="flex-shrink-0">
+                  <i class="fa-solid fa-satellite-dish"></i>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h3>Top Rated Channels</h3>
+                  <p>
+                    Enjoy Top rated TV channels with the best
+                    streaming experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-6">
+              <div class="d-flex benefits-single-item">
+                <div class="flex-shrink-0">
+                  <i class="fa-solid fa-wifi"></i>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h3>Fast Connected</h3>
+                  <p>
+                    Once you sign up .You get access instantly
+                    with same login credentials.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="d-flex benefits-single-item">
+                <div class="flex-shrink-0">
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h3>Support 24/7</h3>
+                  <p>
+                    Get a 24 hours 7 days a week Technical
+                    Support.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-6">
+              <div class="d-flex benefits-single-item">
+                <div class="flex-shrink-0">
+                  <i class="fa-sharp fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h3>Privacy & Security</h3>
+                  <p>
+                    With one time payments and 256-Bit
+                    encryption module. Your minimal data is
+                    safe.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="d-flex benefits-single-item">
+                <div class="flex-shrink-0">
+                  <i class="fa-solid fa-tv"></i>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h3>DIY Installations</h3>
+                  <p>
+                    No need "Tech Savvy". You just download
+                    the app on your TV and you could tell what
+                    to do.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-6">
+              <div class="d-flex benefits-single-item">
+                <div class="flex-shrink-0">
+                  <i class="fa-solid fa-hand-holding-dollar"></i>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h3>Best Pricing Plans</h3>
+                  <p>
+                    You will not find a second place to save
+                    the money with such Quality Standards.
+                  </p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    <div class="fan-facet-wrap">
+    <div class="fan-facet-single-item">
+      <h2>
+        <span class="counter">3</span><span>+</span>
+      </h2>
+      <p>YEARS OF EXPERIENCE</p>
+    </div>
+    <div class="fan-facet-single-item">
+      <h2>
+        <span class="counter">25</span><span>GB</span>
+      </h2>
+      <p>BANDWIDTH CAPACITY</p>
+    </div>
+    <div class="fan-facet-single-item">
+      <h2>
+        <span class="counter">20</span><span>K</span>
+      </h2>
+      <p>TV CHANNELS</p>
+    </div>
+    <div class="fan-facet-single-item">
+      <h2>
+        <span class="counter">99</span><span>%</span>
+      </h2>
+      <p>UPTIME GUARANTEE</p>
+    </div>
+    <div class="fan-facet-single-item">
+      <h2>
+        <span class="counter">2</span><span>K+</span>
+      </h2>
+      <p>SATISFIED CLIENTS</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  <!-- Start Fan Fact Area -->
+  <!-- End Fan Fact Area -->
+</section>
+<!-- End BENEFITS Area -->
+<footer>
+  <div class="footer-contents pricing-carts" id="footer">
+          <div class="footer-content">
+            <img src="{% static 'images/logo1.png' %}" style="max-width: 150px;">
+          </div>
+          <div class="footer-content">
+              <h2 style="color: white;">Social Media</h2>
+              <ul style="display: flex;list-style-type: none; padding: 0 1.5rem; margin: 0;">
+                <li>
+                      <a href="https://www.facebook.com/">
+                        <i class='bx bxl-facebook' ></i>
+                      </a>
+                </li>
+                <li>
+                      <a href="https://www.instagram.com/">
+                        <i class='bx bxl-instagram' ></i>
+                      </a>
+                </li>
+                <li>
+                      <a href="https://www.youtube.com/">
+                        <i class='bx bxl-youtube'></i>
+                      </a>
+                </li>
+            </ul>
+          </div>
+          <div class="footer-content">
+            <h2 style="color: white;">Our mailbox</h2>
+            <h4 style="color: rgb(197, 23, 23);">at.bestiptv@gmail.com</h4>
+          </div>
+          <div class="footer-content">
+            <h2 style="color: white;">Our phone</h2>
+            <h4 style="color: rgb(197, 23, 23);">+212 639 170 799</h4>
+          </div>
+  </div>
+  <div class="footer-copywrite">
+    <h2 style="color: white; padding-top: 16px; font-size: 20px;">Copywrite © 2025 WebIPTVStore</h2>
+  </div>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector(".carousel-track");
+    const images = document.querySelectorAll(".image-box");
+    const track1 = document.querySelector(".channels-logo");
+    const channel = document.querySelectorAll(".channel-box");
+    let index = 1;
+    let index1 = 1;
+    const imageWidth = 300 + 40; // Image width + margin
+    const channelWidth = 170 + 40;
+    const totalImages = 13;
+    const totalchannels = 15;
+    track.style.transform = `translateX(-${index * imageWidth}px)`;
+    track1.style.transform = `translateX(-${index * channelWidth}px)`;
+    function scrollImages() {
+      index++;
+      track.style.transition = "transform 0.7s linear";
+      track.style.transform = `translateX(-${index * imageWidth}px)`;
+      // 🔁 Reset position after reaching the duplicate set
+      if (index >= totalImages+1) {
+        setTimeout(() => {
+          track.style.transition = "none"; // Remove animation
+          index = 1; // Reset index to first real image
+          track.style.transform = `translateX(-${index * imageWidth}px)`;
+        }, 500);
+      }
+    }
+    function scrollchannels() {
+      index1++;
+      track1.style.transition = "transform 2s linear";
+      track1.style.transform = `translateX(-${index1 * channelWidth}px)`;
+      // 🔁 Reset position after reaching the duplicate set
+      if (index1 >= totalchannels) {
+        setTimeout(() => {
+          track1.style.transition = "none"; // Remove animation
+          index1 = 1; // Reset index to first real image
+          track1.style.transform = `translateX(-${index1 * channelWidth}px)`;
+        
+        }, 500);
+      }
+    }
+
+    setInterval(scrollImages, 3000);
+    setInterval(scrollchannels, 2000);
+  });
+</script>
+{% endblock %}

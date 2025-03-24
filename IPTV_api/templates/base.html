@@ -1,0 +1,120 @@
+{% load compress static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+    <title>Best IPTV{% block title %}{% endblock %}</title>
+    <meta name="description" content="Get the best IPTV subscription with HD channels, fast servers, and affordable pricing. Works on Smart TV, Android, Firestick & more.">
+    <meta name="keywords" content="Live TV Streaming Service ,best IPTV Service 2025, IPTV subscription, 4K IPTV Service, IPTV for Firestick,Best IPTV Service in USA">
+    {% compress css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'IPTV_api/style.css' %}">
+    {% endcompress %}
+    {% compress js %}
+    <script src="{% static 'IPTV_api/script.js' %}"></script>
+    {% endcompress %}
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+            {% include 'header.html' %}
+            <div class="container">
+                <!-- First Row -->
+                <div class="row">
+                    <div class="scroller">
+                        <div class="image-box"><img src="{% static 'images/transformers.jpeg' %}" alt="IPTV"></div>
+                        <div class="image-box"><img src="{% static 'images/spiderman.jpeg' %}" alt="IPTV"></div>
+                    </div>
+                    <div class="scroller">
+                        <div class="image-box"><img src="{% static 'images/joker.jpeg' %}" alt="IPTV"></div>
+                        <div class="image-box"><img src="{% static 'images/aquaman.jpeg' %}" alt="IPTV"></div>
+                    </div>
+                    <div class="scroller">
+                        <div class="image-box"><img src="{% static 'images/avengers1.jpeg' %}" alt="IPTV"></div>
+                        <div class="image-box"><img src="{% static 'images/john-wick.jpeg' %}" alt="IPTV"></div>
+                    </div>
+                    <div class="scroller">
+                        <div class="image-box"><img src="{% static 'images/matrix.jpeg' %}" alt="IPTV"></div>
+                        <div class="image-box"><img src="{% static 'images/vikings1.jpeg' %}" alt="IPTV"></div>
+                    </div>
+                </div>
+        
+                <!-- Middle Row -->
+                <div class="row reverse">
+                    <div class="scroller">
+                        <div class="image-box"><img src="{% static 'images/baseball.jpeg' %}" alt="IPTV"></div>
+                        <div class="image-box"><img src="{% static 'images/lamine-yamal.jpeg' %}" alt="IPTV"></div>
+                    </div>
+                    <div class="scroller">
+                        <div class="image-box"><img src="{% static 'images/nadal.jpeg' %}" alt="IPTV"></div>
+                        <div class="image-box"><img src="{% static 'images/basketball.jpeg' %}" alt="IPTV"></div>
+                    </div>
+                    <div class="scroller">
+                        <div class="image-box"><img src="{% static 'images/rugby.jpeg' %}" alt="IPTV"></div>
+                        <div class="image-box"><img src="{% static 'images/vinicius-junior.jpeg' %}" alt="IPTV"></div>
+                    </div>
+                    <div class="scroller">
+                        <div class="image-box"><img src="{% static 'images/manchester-united.jpeg' %}" alt="IPTV"></div>
+                        <div class="image-box"><img src="{% static 'images/real-madrid.jpeg' %}" alt="IPTV"></div>
+                    </div>
+                </div>
+        
+                <!-- Third Row -->
+                <div class="row">
+                    <div class="scroller">
+                        <div class="image-box"><img src="{% static 'images/lacasa.jpeg' %}" alt="IPTV"></div>
+                        <div class="image-box"><img src="{% static 'images/game-of-thrones.jpeg' %}" alt="IPTV"></div>
+                    </div>
+                    <div class="scroller">
+                        <div class="image-box"><img src="{% static 'images/squid-game.jpeg' %}" alt="IPTV"></div>
+                        <div class="image-box"><img src="{% static 'images/prison-break.jpeg' %}" alt="IPTV"></div>
+                    </div>
+                    <div class="scroller">
+                        <div class="image-box"><img src="{% static 'images/breaking-bad.jpeg' %}" alt="IPTV"></div>
+                        <div class="image-box"><img src="{% static 'images/the-walking-dead.jpeg' %}" alt="IPTV"></div>
+                    </div>
+                    <div class="scroller">
+                        <div class="image-box"><img src="{% static 'images/vikings1.jpeg' %}" alt="IPTV"></div>
+                        <div class="image-box"><img src="{% static 'images/the-100.jpeg' %}" alt="IPTV"></div>
+                    </div>
+                </div>
+            </div>
+            <main>
+                <!-- Main Content Block -->
+                {% block content %} 
+                {% endblock %}
+            </main>
+            <script>
+                // Add smooth speed variations
+                document.querySelectorAll('.scroller').forEach(scroller => {
+                    let requestId;
+                    let startTime;
+                    const duration = parseInt(getComputedStyle(scroller).animationDuration) * 20000;
+        
+                    function animate(timestamp) {
+                        if (!startTime) startTime = timestamp;
+                        const progress = (timestamp - startTime) % duration;
+                        
+                        // Sine-based speed modulation
+                        const speedFactor = Math.sin((progress / duration) * Math.PI *3) * 0.5 + 0.5;
+                        scroller.style.animationPlayState = 'running';
+                        scroller.style.animationTimingFunction = `cubic-bezier(${0.5 - speedFactor/10},1,${0.5 + speedFactor/10}, 0)`;
+        
+                        requestId = requestAnimationFrame(animate);
+                    }
+        
+                    // Start animation
+                    requestId = requestAnimationFrame(animate);
+        
+                });
+        
+            </script>
+</body>
+</html>
