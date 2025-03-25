@@ -25,7 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+SECRET_KEY = 'django-insecure-7ic8i%oq2e3pbjp$d)_e!&7pwi5@xgqe6nmzkju-!z$^+ke3qw'
+
+ALLOWED_HOSTS = ['149.130.223.242']
 
 
 # Application definition
@@ -49,7 +51,7 @@ INSTALLED_APPS = [
 ]
 CORS_ALLOW_CREDENTIALS = True  # Allow frontend to send cookies
 CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:8000",  # Change this to your frontend domain
+    "http://149.130.223.242:8000",  # Change this to your frontend domain
 ]
 
 CSRF_COOKIE_HTTPONLY = True
@@ -94,6 +96,16 @@ WSGI_APPLICATION = 'IPTV_project.wsgi.application'
 
 
 # Database
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'iptv_db',
+        'USER': 'iptv_user',
+        'PASSWORD': 'Abdou@2003',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 

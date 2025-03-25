@@ -5,7 +5,7 @@
 
 <script>
     async function fetchData() {
-        const apiUrl = 'http://127.0.0.1:8000/api/user/';
+        const apiUrl = '/api/user/';
         const token = localStorage.getItem('Token');
         if (!token) {
             window.location.href = "/login/";
