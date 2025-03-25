@@ -14,7 +14,6 @@ django-appconf==1.1.0
 django-compressor==4.5.1
 django-cors-headers==4.6.0
 django-filter==25.1
-django-imagekit==5.0.0
 django-robots==6.1
 django_sitemaps==2.0.1
 djangorestframework==3.15.2
