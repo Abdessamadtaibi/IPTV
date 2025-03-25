@@ -238,12 +238,12 @@ i{
 	border-radius: 20px;
 	width: clamp(30em, 50vw, 50em);
 	height: auto;
+	margin: 0 0.5rem;
 	box-shadow: 0 5px 150px rgba(204, 33, 33, 0.598);
 }
 .our-content .our-content-text{
 	color: white;
 	width: clamp(25em, 40vw, 40em);
-	margin-left: clamp(2em, 3vw, 10em);
 	padding:4rem 1rem 0rem 1rem;
 }
 ul{
@@ -483,7 +483,7 @@ footer{
 	  .carousel-track .image-box img {
 		width: 100%;
 		height: 100%;
-		border-radius: 5px;
+		border-radius: 1px;
 		object-fit: cover;
 		opacity: 0.9;
 	  }

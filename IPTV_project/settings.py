@@ -27,7 +27,7 @@ DEBUG = True
 
 SECRET_KEY = 'django-insecure-7ic8i%oq2e3pbjp$d)_e!&7pwi5@xgqe6nmzkju-!z$^+ke3qw'
 
-ALLOWED_HOSTS = ['149.130.223.242']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -99,9 +99,9 @@ WSGI_APPLICATION = 'IPTV_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'iptv_db',
-        'USER': 'iptv_user',
-        'PASSWORD': 'Abdou@2003',
+        'NAME': 'IPTV_db',
+        'USER': 'root',
+        'PASSWORD': '1234',
         'HOST': 'localhost',
         'PORT': '3306',
     }
