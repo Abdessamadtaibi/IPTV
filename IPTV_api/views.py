@@ -25,7 +25,8 @@ def homeview(request):
         "description": "Get the best IPTV subscription with HD channels, fast servers, and affordable pricing.",
         "keywords": "best IPTV, IPTV subscription, HD IPTV, IPTV for Firestick"
     }
-    return render(request,'home.html',seo_data)
+    plans = Plan.objects.all()
+    return render(request,'home.html',seo_data,)
 
 def userview(request):
     return render(request,'user.html',)
@@ -41,8 +42,10 @@ Sitemap: /sitemap.xml/
 """
     return HttpResponse(content, content_type="text/plain")
 
-class PaymentsView(TemplateView):
-    template_name = 'payments.html'
+def payments(request,slug=None):
+    if slug :
+        plan = get_object_or_404(Plan,slug=slug)
+        return render(request,'payments.html',{'plan':plan})
 
 class UserView(APIView):
     permission_classes = [IsAuthenticated]

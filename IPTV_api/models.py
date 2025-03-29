@@ -2,14 +2,19 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
 from django.db import models
-
+from django.utils.text import slugify
 
 class Plan(models.Model):
     name = models.CharField(max_length=50)
+    slug = models.SlugField(max_length=200, unique=True, blank=True, null=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     duration_days = models.IntegerField()
     description = models.TextField(max_length=2000,default='')
 
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
     def __str__(self):
         return f"{self.name} - ${self.price}"
 

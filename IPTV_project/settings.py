@@ -27,7 +27,8 @@ DEBUG = True
 
 SECRET_KEY = 'django-insecure-7ic8i%oq2e3pbjp$d)_e!&7pwi5@xgqe6nmzkju-!z$^+ke3qw'
 
-ALLOWED_HOSTS = ['149.130.223.242']
+ALLOWED_HOSTS = ['*']
+SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popus'
 
 
 # Application definition
@@ -51,12 +52,12 @@ INSTALLED_APPS = [
 ]
 CORS_ALLOW_CREDENTIALS = True  # Allow frontend to send cookies
 CORS_ALLOWED_ORIGINS = [
-    "http://149.130.223.242:8000",  # Change this to your frontend domain
+    "https://149.130.223.242:8000",  # Change this to your frontend domain
 ]
 
 CSRF_COOKIE_HTTPONLY = True
-CSRF_COOKIE_SAMESITE = "Lax"  # Or "Strict" for more security
-CSRF_COOKIE_SECURE = False  # Set to True in production with HTTPS
+CSRF_COOKIE_SAMESITE = "Strict"  # Or "Strict" for more security
+CSRF_COOKIE_SECURE = True  # Set to True in production with HTTPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -99,9 +100,9 @@ WSGI_APPLICATION = 'IPTV_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'iptv_db',
-        'USER': 'iptv_user',
-        'PASSWORD': 'Abdou@2003',
+        'NAME': 'iptv1_db',
+        'USER': 'root',
+        'PASSWORD': '1234',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -146,12 +147,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 LOGIN_URL = "/login/"
 STATIC_URL = '/static/'
-import os
-MEDIA_ROOT = os.path.join(BASE_DIR, 'blog')
 MEDIA_URL = '/media/'
+import os
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS =  [
 ]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 COMPRESS_ENABLED = True          # Enable compression
 COMPRESS_OFFLINE = True          # Required for `compress` command # Defined earlier
 # Optional optimizations
@@ -191,11 +192,24 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
 }
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"  # Change to your email provider
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "at.iptvplus@gmail.com"  # Replace with your email
+EMAIL_HOST_PASSWORD = "Abdou@2003"  # Use environment variables for security
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 DJOSER = {
     'LOGIN_FIELD': 'username',  # Change to 'email' if you want users to log in with email
-    'USER_CREATE_PASSWORD_RETYPE': True,  # Requires password confirmation during registration
-    'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',  # URL for password reset
+    "PASSWORD_RESET_SHOW_EMAIL_NOT_FOUND": True,  # Requires password confirmation during registration
+    'PASSWORD_RESET_CONFIRM_URL': 'password-reset/{uid}/{token}',  # Customize this URL
+    'USERNAME_RESET_CONFIRM_URL': 'username-reset/{uid}/{token}',
+    'ACTIVATION_URL': 'activate/{uid}/{token}',
+    'SERIALIZERS': {},  # URL for password reset
     'USERNAME_CHANGED_EMAIL_CONFIRMATION': False,  # Optional: sends email on username change
     'PASSWORD_CHANGED_EMAIL_CONFIRMATION': False,  # Optional: sends email on password change
-    'SEND_CONFIRMATION_EMAIL': False,  # Sends email on registration if configured
+    'SEND_CONFIRMATION_EMAIL': False,
+      "EMAIL": {
+        "password_reset": "iptv_project.email.PasswordResetEmail",
+    },
 }

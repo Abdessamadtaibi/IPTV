@@ -15,14 +15,52 @@
   // Run this function when the page loads
 window.onload = checkIfAuthenticated;
 </script>
-<section class="login-box content-overlay">
-<h1>Pay for IPTV Subscription</h1>
-<h3>Secure Payments With Wise </h3>
-<img src="{% static 'images/pay_me.png' %}" alt="Pay IPTV Subscription">
-<div class="header-btn">
-  <a href="https://wise.com/pay/me/abdessamadt22" style="text-decoration: none;"><button type="submit" class="btn">Pay With Wise</button></a>
-</div>
-<h3>After Pay </h3>
-<a href="/user/" style="color:rgb(182, 23, 23);">Get Your Subscription Code</a>
+<section class="content-overlay">
+  <div style="width: 100%; text-align: center; margin-top: 3rem;">
+    <h1>After Pay </h1>
+    <a href="/user/" style="color:rgb(182, 23, 23);">Get Your Subscription Code</a>
+  </div>
+<form class="pricing-carts">
+  <div class="payment-box">
+    <h1>Pay for IPTV Subscription</h1>
+    <h3>Secure Payments With Paypal </h3>
+    <img src="{% static 'images/pay_paypal.png' %}" alt="Pay IPTV Subscription">
+    <div id="paypal-button" class="pay-btn">
+    </div>
+  </div>
+  <div class="payment-box">
+    <h1>Pay for IPTV Subscription</h1>
+    <h3>Secure Payments With Wise </h3>
+    <img src="{% static 'images/pay_wise.png' %}" alt="Pay IPTV Subscription" style="min-height: 7rem;">
+    <div class="pay-btn">
+      <a href="https://wise.com/pay/me/abdessamadt22"><button type="submit" class="btn ">Pay With Wise</button></a>
+    </div>
+  </div>
+</form>
 </section>
+<script src="https://www.paypal.com/sdk/js?client-id=AbFw1BNLsHWm4fTK7eXXcPlp3-W2SeEe3u6LSd2s5clFPGfD59eyJO1TbeG8QO-pdELlW4kruquzF1uM&currency=USD"></script>
+<script>
+  paypal.Buttons({
+    createOrder: function(data,actions){
+        return actions.order.create({
+          purchase_units: [
+            {
+              amount: {
+                value: "{{plan.price}}" 
+              }
+            }
+          ]
+        })
+    },
+    onApproveL: function(data,actions){ 
+      return actions.order.capture().then(function(Detail){
+        console.log(Detail);
+        if (Detail.status === "COMPLETED"){
+          window.location.href = "/payment-success/";
+        }
+      });
+
+    },
+  }).render("#paypal-button")
+</script>
 {% endblock %}

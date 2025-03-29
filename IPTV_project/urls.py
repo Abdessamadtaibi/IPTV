@@ -25,7 +25,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
-
 sitemaps = {
     'static': StaticViewSitemap(),
     'plans': PlanSitemap(),
@@ -42,7 +41,7 @@ urlpatterns = [
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.authtoken')),
     path('',homeview,  name='home'),
-    path('payments/', PaymentsView.as_view(), name='payments'),
+    path('payments/<slug:slug>/', payments, name='payments'),
     path('blog/', blog_index, name="blog_index"),
     path('blog/<slug:slug>/', blog_detail, name="blog_detail"),
     path('sitemap.xml/', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
