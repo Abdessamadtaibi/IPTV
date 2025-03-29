@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 SECRET_KEY = 'django-insecure-7ic8i%oq2e3pbjp$d)_e!&7pwi5@xgqe6nmzkju-!z$^+ke3qw'
 
@@ -52,12 +52,14 @@ INSTALLED_APPS = [
 ]
 CORS_ALLOW_CREDENTIALS = True  # Allow frontend to send cookies
 CORS_ALLOWED_ORIGINS = [
-    "https://149.130.223.242:8000",  # Change this to your frontend domain
+    "https://iptv.plus",      # Your main domain
+    "https://www.iptv.plus",
+    "https://iptvplus.us",    # Your secondary domain
+    "https://www.iptvplus.us",
 ]
-
 CSRF_COOKIE_HTTPONLY = True
-CSRF_COOKIE_SAMESITE = "Strict"  # Or "Strict" for more security
-CSRF_COOKIE_SECURE = True  # Set to True in production with HTTPS
+CSRF_COOKIE_SAMESITE = "Strict"  
+CSRF_COOKIE_SECURE = True  
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
