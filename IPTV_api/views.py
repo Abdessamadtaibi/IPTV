@@ -42,10 +42,14 @@ Sitemap: /sitemap.xml/
 """
     return HttpResponse(content, content_type="text/plain")
 
-def payments(request,slug=None):
+def pay(request,slug=None):
     if slug :
         plan = get_object_or_404(Plan,slug=slug)
-        return render(request,'payments.html',{'plan':plan})
+        return render(request,'pay.html',{'plan':plan})
+
+def plans(request):
+        plans = Plan.objects.all()
+        return render(request,'plans.html',{'plans':plans})
 
 class UserView(APIView):
     permission_classes = [IsAuthenticated]

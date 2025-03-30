@@ -42,7 +42,7 @@
         // Store token in cookies
         document.cookie = `Token=${data.auth_token}; path=/; Secure; HttpOnly; SameSite=Lax`;
         // Redirect to subscriptions page
-        window.location.href = "/payments/";
+        window.location.href = "/pay/plans/";
       } else {
         const errorData = await response.json();
         alert("Login failed: " + (errorData.non_field_errors || "Unknown error"));

@@ -28,6 +28,7 @@ DEBUG = False
 SECRET_KEY = 'django-insecure-7ic8i%oq2e3pbjp$d)_e!&7pwi5@xgqe6nmzkju-!z$^+ke3qw'
 
 ALLOWED_HOSTS = ['iptvplus.us','www.iptvplus.us']
+#ALLOWED_HOSTS = ['*']
 SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popus'
 
 
@@ -51,15 +52,18 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
 ]
 CORS_ALLOW_CREDENTIALS = True  # Allow frontend to send cookies
+CORS_ALLOW_CREDENTIALS = True  # Allow frontend to send cookies
 CORS_ALLOWED_ORIGINS = [
     "https://iptv.plus",      # Your main domain
     "https://www.iptv.plus",
     "https://iptvplus.us",    # Your secondary domain
     "https://www.iptvplus.us",
 ]
+CSRF_TRUSTED_ORIGINS = ['https://iptvplus.us', 'https://149.130.223.242']
+
 CSRF_COOKIE_HTTPONLY = True
-CSRF_COOKIE_SAMESITE = "Strict"  
-CSRF_COOKIE_SECURE = True  
+CSRF_COOKIE_SAMESITE = 'Lax'  # Or "Strict" for more security
+CSRF_COOKIE_SECURE = True  # Set to True in production with HTTPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

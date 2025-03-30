@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} ⏐ Payments{% endblock %}
+{% block content %}
+<script>
+  function checkIfAuthenticated() {
+      const token = localStorage.getItem('Token');
+  
+      if (!token) {
+          // If no token, redirect to login page
+          window.location.href = "/register/";
+      }
+  }
+  
+  // Run this function when the page loads
+window.onload = checkIfAuthenticated;
+</script>
+<style>
+  .pricing-carts a{
+    text-decoration: none;
+  }
+  .pay-box{
+    height: 25vh;
+    transition: transform 0.3s ease;
+  }
+  .pay-box:hover{
+    height: 25vh;
+    transform : scale(1.03);
+    scale: 1.1;
+    background: repeating-linear-gradient(
+		45deg,
+		transparent,
+		transparent 10px,
+		rgba(255,255,255,0.1) 10px,
+		rgba(255,255,255,0.1) 20px
+	);
+  }
+  .pay-box h1{
+    font-size: 25px;
+  }
+  .pay-box p{
+    font-size: 18px;
+    opacity: 0.5;
+  }
+@media only screen and (max-width: 767px) {
+  .pay-box{
+    height: 16vh;
+  }
+  .pay-box h1{
+    font-size: 20px;
+  }
+  .pay-box p{
+    font-size: 15px;
+    margin-bottom: 1rem;
+  }
+}
+</style>
+<section class="content-overlay">
+  <div style="width: 100%; text-align: center; margin-top: 3rem;">
+    <h1>Choose Your Plan</h1>
+  </div>
+<form class="pricing-carts">
+    {% for plan in plans %}
+        <a href="{% url 'plan' slug=plan.slug %}" description = "Best IPTV Plans ">
+            <div class=" pay-box payment-box">
+                <h1>{{plan.name}}</h1>
+                <h1 style="color:rgb(182, 23, 23);">{{plan.price}}</h1>
+                <p>{{plan.description}} {{plan.description}}{{plan.description}}{{plan.description}}</p>
+            </div>
+        </a>
+    {% endfor %}
+</form>
+</section>
+{% endblock %}

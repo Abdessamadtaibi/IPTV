@@ -63,7 +63,7 @@
     }
     function displayError(message) {
         const container = document.getElementById('data-container');
-        container.innerHTML = `<div style="color: red;">${message}</div>`;
+        container.innerHTML = `<div style="color: red;">Failed to fetch data.<br> <p style = 'color:white;'>Please wait a few minutes after payment to access your subscription.</p> </div>`;
     }
 
     window.onload = fetchData;
