@@ -23,12 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 SECRET_KEY = 'django-insecure-7ic8i%oq2e3pbjp$d)_e!&7pwi5@xgqe6nmzkju-!z$^+ke3qw'
 
-#ALLOWED_HOSTS = ['iptvplus.us','www.iptvplus.us']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['iptvplus.us','www.iptvplus.us']
+#ALLOWED_HOSTS = ['*']
 SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popus'
 
 
@@ -59,7 +59,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://iptvplus.us",    # Your secondary domain
     "https://www.iptvplus.us",
 ]
-#CSRF_TRUSTED_ORIGINS = ['https://iptvplus.us', 'https://149.130.223.242']
+CSRF_TRUSTED_ORIGINS = ['https://iptvplus.us', 'https://149.130.223.242']
 
 CSRF_COOKIE_HTTPONLY = True
 CSRF_COOKIE_SAMESITE = 'Lax'  # Or "Strict" for more security
@@ -106,9 +106,9 @@ WSGI_APPLICATION = 'IPTV_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'iptv1_db',
-        'USER': 'root',
-        'PASSWORD': '1234',
+        'NAME': 'iptv_db',
+        'USER': 'iptv_user',
+        'PASSWORD': 'Abdou@2003',
         'HOST': 'localhost',
         'PORT': '3306',
     }
