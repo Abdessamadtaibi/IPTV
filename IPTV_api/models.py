@@ -41,3 +41,12 @@ class Payment(models.Model):
 
     def __str__(self):
         return f"Payment of ${self.amount} by {self.user.username}"
+
+
+class KeywordsDescriptionHome(models.Model):
+    title = models.CharField(max_length=100,default='')
+    head_keyword = models.TextField(max_length=500,default='')
+    head_description = models.TextField(max_length=500,default='')
+    alt_images_base = models.TextField(max_length=200,default='')
+    alt_channels = models.TextField(max_length=200,default='')
+    alt_series = models.TextField(max_length=200,default='')

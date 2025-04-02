@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
     <title>IPTV Plus{% block title %}{% endblock %}</title>
-    <meta name="description" content="Get the best IPTV subscription with HD channels, fast servers, and affordable pricing. Works on Smart TV, Android, Firestick & more.">
-    <meta name="keywords" content="IPTV in USA,Live TV Streaming Service ,best IPTV Service 2025, IPTV subscription, 4K IPTV Service, IPTV for Firestick,Best IPTV Service in USA">
+    <meta name="description" content="{% block description %}{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}{% endblock %}">
     {% compress css %}
     <link rel="stylesheet" type="text/css" href="{% static 'IPTV_api/style.css' %}">
     {% endcompress %}

@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %} ⏐ Home{% endblock %}
+{% block description %}{{ seo_data.head_description}}{% endblock %}
+{% block keywords %}{{ seo_data.head_keyword}}{% endblock %}
+{% block alt_image_base %}{{ seo_data.head_keyword}}{% endblock %}
 {% block content %}
 <style>
   .price-card .btn{
@@ -53,25 +56,25 @@
 <section class="who-we-are" style="padding-top: 5rem;">
   <div class="carousel-container">
     <div class="channels-logo">
-      <div class="channel-box"><img src="{% static 'images/channels/bein.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/disney.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/prime.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/netflix.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/hbo.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/videoland.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/FOX.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/SKY.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/formula1.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/hulu.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/apple.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/bein.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/disney.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/prime.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/netflix.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/hbo.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/videoland.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/FOX.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
-      <div class="channel-box"><img src="{% static 'images/channels/SKY.png' %}" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/bein.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/disney.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/prime.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/netflix.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/hbo.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/videoland.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/FOX.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/SKY.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/formula1.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/hulu.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/apple.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/bein.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/disney.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/prime.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/netflix.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/hbo.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/videoland.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/FOX.png' %}" alt="{{ seo_data.alt_channels}}"></div>
+      <div class="channel-box"><img src="{% static 'images/channels/SKY.png' %}" alt="{{ seo_data.alt_channels}}"></div>
     </div>
   </div>
   <div class=" our-content pricing-carts">
@@ -124,25 +127,25 @@
   <div class="box-our-content" >
     <div class="carousel-container">
       <div class="carousel-track">
-        <div class="image-box"><img src="{% static 'images/series/avengers.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/dark.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/fast.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/game-of-thrones.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/breaking-bad.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/john-wick.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/joker.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/money-heist.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/vikings.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/the-100.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/squid-game.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/peaky-blinders.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/prison-break.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/avengers.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/dark.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/fast.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/game-of-thrones.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/breaking-bad.webp' %}" loading="lazy" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/john-wick.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/avengers.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/dark.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/fast.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/game-of-thrones.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/breaking-bad.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/john-wick.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/joker.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/money-heist.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/vikings.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/the-100.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/squid-game.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/peaky-blinders.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/prison-break.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/avengers.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/dark.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/fast.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/game-of-thrones.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/breaking-bad.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
+        <div class="image-box"><img src="{% static 'images/series/john-wick.webp' %}" loading="lazy" alt="{{ seo_data.alt_series}}"></div>
       </div>
     </div>
   </div>

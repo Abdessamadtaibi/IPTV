@@ -1,5 +1,5 @@
 from django.shortcuts import render,get_object_or_404,redirect
-from .models import Plan,Subscription,Payment
+from .models import Plan,Subscription,Payment,KeywordsDescriptionHome
 from rest_framework.decorators import APIView
 from rest_framework import generics,status
 from . import serializers
@@ -20,13 +20,8 @@ def loginview(request):
     return render(request,'login.html')
 
 def homeview(request):
-    seo_data = {
-        "title": "Best IPTV Subscription - HD Streaming & Fast Servers",
-        "description": "Get the best IPTV subscription with HD channels, fast servers, and affordable pricing.",
-        "keywords": "best IPTV, IPTV subscription, HD IPTV, IPTV for Firestick"
-    }
-    plans = Plan.objects.all()
-    return render(request,'home.html',seo_data,)
+    seo_data =  KeywordsDescriptionHome.objects.get()
+    return render(request,'home.html',{'seo_data':seo_data})
 
 def userview(request):
     return render(request,'user.html',)
