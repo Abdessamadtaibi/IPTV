@@ -108,7 +108,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'iptv_db',
         'USER': 'iptv_user',
-        'PASSWORD': 'Avdou@2003',
+        'PASSWORD': 'Abdou@2003',
         'HOST': 'localhost',
         'PORT': '3306',
     }
