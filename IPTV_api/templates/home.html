@@ -3,7 +3,7 @@
 {% block title %} ⏐ Home{% endblock %}
 {% block content %}
 <style>
-    .price-card .btn{
+  .price-card .btn{
     transform: transform 0.3s ease;
   }
   .price-card .bronze {
@@ -22,6 +22,22 @@
     margin-left: 28%;
     width: 200px;
   }
+  .carousel-track .image-box img{
+    border-radius: 5px;
+  }
+  .cta-section {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.cta-link {
+  color: #8B0000;
+  text-decoration: none;
+}
+
+.cta-link:hover {
+  text-decoration: underline;
+}
 </style>
 <div class="content-overlay">
   <div class="overlay-content">
@@ -60,10 +76,10 @@
   </div>
   <div class=" our-content pricing-carts">
     <div class="our-content-image">
-      <img src="{% static 'images/image_fx1.jpeg' %}" style="border-radius: 20px;" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA">
+      <img src="{% static 'images/image_fx1.webp' %}" loading="lazy" style="border-radius: 20px;" alt="best IPTV Service 2025, Live TV Streaming Service, IPTV Subscription in USA">
     </div>
     <div class="our-content-text">
-      <span class="top-title" style="color: rgb(172, 4, 4);"> OUR CONTENT</span>
+      <span class="top-title" style="color: #B20000;"> OUR CONTENT</span>
       <h2>
         More to Stream
       </h2>
@@ -100,7 +116,7 @@
 
 <section class="who-we-are">
   <div class="enjoy" style="text-align: center;">
-    <span class="top-title" style="color: rgb(172, 4, 4);">ENJOY YOUR TIME</span>
+    <span class="top-title" style="color: #B20000;">ENJOY YOUR TIME</span>
     <h2>
         Enjoy watching now Movies, Series, Shows, Anime and More
     </h2>
@@ -108,25 +124,25 @@
   <div class="box-our-content" >
     <div class="carousel-container">
       <div class="carousel-track">
-        <div class="image-box"><img src="{% static 'images/series/avengers.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/dark.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/fast.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/game-of-thrones.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/breaking-bad.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/john-wick.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/joker.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/money-heist.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/vikings.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/the-100.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/squid-game.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/peaky-blinders.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/prison-break.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/avengers.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/dark.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/fast.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/game-of-thrones.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/breaking-bad.jpeg' %}" alt="IPTV"></div>
-        <div class="image-box"><img src="{% static 'images/series/john-wick.jpeg' %}" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/avengers.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/dark.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/fast.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/game-of-thrones.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/breaking-bad.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/john-wick.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/joker.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/money-heist.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/vikings.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/the-100.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/squid-game.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/peaky-blinders.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/prison-break.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/avengers.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/dark.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/fast.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/game-of-thrones.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/breaking-bad.webp' %}" loading="lazy" alt="IPTV"></div>
+        <div class="image-box"><img src="{% static 'images/series/john-wick.webp' %}" loading="lazy" alt="IPTV"></div>
       </div>
     </div>
   </div>
@@ -134,7 +150,7 @@
 <section class="who-we-are" id="ho-we-are">
   <div class="pricing-carts" >
     <div class="who-we-are-content">
-      <span class="top-title" style="color: rgb(172, 4, 4); padding-left: 1rem;"> WHO WE ARE</span>
+      <span class="top-title" style="color: #B20000; padding-left: 1rem;"> WHO WE ARE</span>
       <h2>
       We are proud to offer the best IPTV subscriptions
       </h2>
@@ -182,14 +198,14 @@
 <!-- Start Pricing Area -->
 <section class="who-we-are" style="min-height: 950px;" id="pricing">
   <div style="text-align: center; padding-top: 5rem;" >
-    <span class="top-title" style="color: rgb(172, 4, 4);">PRICING PLANS</span>
+    <span class="top-title" style="color: #B20000;">PRICING PLANS</span>
     <h2>
         Our Affordable Pricing Plans
     </h2>
   </div>
   <div class="pricing-carts">
     <div class="price-card" style="text-decoration: none;">
-        <img src="{% static 'images/bronze.png' %}" style="height: 80px;width: 80px;">
+        <img src="{% static 'images/bronze.png' %}" loading="lazy" style="height: 80px;width: 80px;" alt="bronse plan">
         <h1>BRONSE PLAN</h1>
         <h2>3 Month</h2>
         <h3>$ 19.99</h3>
@@ -225,7 +241,7 @@
         </div>
     </div>
     <div  class="price-card" style="text-decoration: none;">
-      <img src="{% static 'images/silver.png' %}" style="height: 80px;width: 80px;">
+      <img src="{% static 'images/silver.png' %}" loading="lazy" style="height: 80px;width: 80px;"alt="silver plan">
       <h1>SILVER PLAN</h1>
       <h2>6 Month</h2>
       <h3>$ 34.99</h3>
@@ -261,7 +277,7 @@
       </div>
   </div>
   <div  class="price-card" style="text-decoration: none;">
-    <img src="{% static 'images/gold.png' %}" style="height: 80px;width: 80px;">
+    <img src="{% static 'images/gold.png' %}" loading="lazy" style="height: 80px;width: 80px;"alt="gold plan">
     <h1>GOLD PLAN</h1>
     <h2>12 Month</h2>
     <h3>$ 54.99</h3>
@@ -297,11 +313,10 @@
     </div>
   </div>
   </div>
-  <div style="text-align: center; padding:3rem 0 ;" >
-    <h2 class="top-title">
-        How To Get IPTV Subscription ?
-    </h2>
-    <span class="top-title"><a href="/blog/how-to-get-iptv-subscription/" style="color: rgba(212, 12, 12, 0.863);"> Click Here</a></span>
+  <div class="cta-section">
+    <a href="/blog/how-to-get-iptv-subscription/" class="cta-link">
+      <h3 class="cta-heading">How To Get IPTV Subscription?</h3>
+    </a>
   </div>
 </section>
 <!-- End Pricing Area -->
@@ -311,8 +326,9 @@
     <div class="col-xl-6">
       <div class="benefits-img">
         <img
-          src="{% static 'images/image_fx_.png' %}"
+          src="{% static 'images/image_fx.webp' %}"
           alt="Images"
+          loading="lazy"
         />
         <div class="review mb-minus-53">
           <div class="review-in">
@@ -323,7 +339,7 @@
       </div>
     </div>
     <div class="benefits-contents">
-      <span class="top-title benef" style="color: rgb(172, 4, 4);">BENEFITS</span>
+      <span class="top-title benef" style="color: #B20000;">BENEFITS</span>
       <h2 class="benef">
           Only benefits
       </h2>
@@ -420,7 +436,7 @@
             </div>
         </div>
       </div>
-    <div class="fan-facet-wrap" style="background-color: rgb(172, 4, 4);">
+    <div class="fan-facet-wrap" style="background-color: #B20000;">
     <div class="fan-facet-single-item">
       <h2>
         <span class="counter">3</span><span>+</span>
@@ -461,7 +477,7 @@
 <footer>
   <div class="footer-contents pricing-carts" id="footer">
           <div class="footer-content">
-            <img src="{% static 'images/logo.png' %}" style="max-height: 4rem;">
+            <img src="{% static 'images/logo.png' %}" loading="lazy" style="max-height: 4rem; width: auto;" alt="logo">
           </div>
           <div class="footer-content">
               <h2 style="color: white;">Social Media</h2>
@@ -485,11 +501,11 @@
           </div>
           <div class="footer-content">
             <h2 style="color: white;">Our mailbox</h2>
-            <h4 style="color: rgb(172, 4, 4);">at.iptvplus@gmail.com</h4>
+            <p style="color: #B20000;">at.iptvplus@gmail.com</p>
           </div>
           <div class="footer-content">
             <h2 style="color: white;">Our phone</h2>
-            <h4 style="color: rgb(172, 4, 4);">+212 639 170 799</h4>
+            <p style="color: #B20000;">+212 639 170 799</p>
           </div>
   </div>
   <div class="footer-copywrite">

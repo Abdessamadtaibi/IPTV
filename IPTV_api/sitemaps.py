@@ -5,7 +5,7 @@ from IPTV_api.models import Plan, Subscription
 class StaticViewSitemap(Sitemap):
     protocol = 'https' 
     def items(self):
-        return ['home','plans']
+        return ['home','pay']
 
     def location(self, item):
         return reverse(item)
@@ -25,5 +25,5 @@ class PlanSitemap(Sitemap):
         return Plan.objects.all()
 
     def location(self, obj):
-        return reverse('pay',args=[obj.slug])  # Use URL name
+        return reverse('plan',args=[obj.slug])  # Use URL name
 
